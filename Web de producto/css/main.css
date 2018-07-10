@@ -1,0 +1,265 @@
+* {
+    margin: 1px;
+    padding: 1px;
+    box-sizing: border-box;  /*Para que las cajas no se desborden unas con otras*/
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.contenedorPrincipal { 
+    /* background: rgb(116, 9, 9); */
+    display: flex;  /* Muestra uno a lado del otro */
+    flex-flow: column nowrap; /* para que se muestre en columnas y nowrap para que se adapten los cuadros en tamaño establecido. Es decir anulamos la sentencia anterior*/
+
+}
+    .margen-interno{
+        padding: 0 50px;
+    }
+
+    .contenedorHeader {
+        /* background: #f85959;  */
+        display: flex;  /* Muestra uno a lado del otro */
+        flex-flow: column nowrap; /* para que se muestre en columnas y nowrap para que se adapten los cuadros en tamaño establecido. Es decir anulamos la sentencia anterior*/
+        background: url(img/index/fondo01.png);
+        background-position: center;
+        background-attachment: contain;
+        background-size: cover;    
+    }
+        .hHearder {
+            background: #23B5E6;
+            /* background-color: #23B5E6; */
+            /* color: #0F3E63; */
+            display: flex;  /* Muestra uno a lado del otro */ 
+            /* para ajustar los cuadros se prueban en esta pagina
+               http://the-echoplex.net/flexyboxes 
+               Para los elemetos padre se analiaza flex conteiner y para los elementos hijos flex item
+               Para colocar los elementos  */
+            flex-direction: row;  /*direcion en fila un cuadro seguido del otro */
+            flex-wrap: nowrap; /* distribuirlos en una sola linea */
+            height: auto; 
+            align-items: center; /* los elementos hijo se centran verticalmente */
+        }
+            .hLogoAlcaldia {
+                background: #23B5E6;
+                /* flex-grow: espacio que ocupa dentro el contenedor 
+                   flex-shrink: factor compression 
+                   flex-basis Tamaño caja contenidos
+                   1 1 auto 1: los espacios seran distribuidos entre elementso hijos, 1 se contraen uniformente, auto se calcula automaticamente
+                */
+                flex: 1 1 auto; 
+                text-align: left;
+                
+            }
+            .hNombreLaCandelaria {
+                background: #23B5E6;
+                /* color: #fff */
+                text-align: center;
+                flex: 5 1 auto; /* 5 1 auto, Flex.grow 5 el nombre de la Candelaria va a ocupar aproximadamente 5 veces mas espacios que se hermanos */  
+
+            }
+                h1 {
+                    color: #fff;
+                    font-size: 1.3em;
+                    padding: 0;
+                    margin: 0;
+                }
+                h3 {
+                    font-size: 0.8em;
+                    line-height: 1.5em;
+                    color: #0F3E63;
+                    padding: 0;
+                    margin: 0;
+                }
+            .hBusqueda {
+                background: #23B5E6;
+                flex: 1 1 auto; 
+                padding: 0px;
+                margin: 0px;
+                text-align: right;
+            }
+        .hNavegacion {
+            background: #23B5E6; 
+            display: flex;  /* Muestra uno a lado del otro */ 
+            flex-direction: row;  /* direcion en fila un cuadro seguido del otro */
+            flex-wrap: nowrap; /* distribuirlos en una sola linea */
+            align-items: center; /* los elementos hijo se centran verticalmente */
+            text-align: center;
+        }
+            .hNavegacion a {
+                color: #000;
+            }
+            .nInicio {
+                /* background: #e6a4b4; */
+                flex: 1 1 auto; 
+            }
+            .nChatLineaAmiga {
+                /* background: #e6a4b4; */
+                flex: 1 1 auto; 
+            }
+            .nTestimonios {
+                /* background: #e6a4b4; */
+                flex: 1 1 auto; 
+            }
+            .nFamiliasUnidas {
+                /* background: #e6a4b4; */
+                flex: 1 1 auto; 
+            }
+            .nAyudaaLaCandelaria {
+                /* background: #e6a4b4; */
+                flex: 1 1 auto; 
+            }
+            .nUbicanos {
+                /* background: #e6a4b4; */
+                flex: 1 1 auto; 
+            }
+            .nVideos {
+                /* background: #e6a4b4; */
+                flex: 1 1 auto; 
+            }
+            .nInformacion {
+                /* background: #e6a4b4; */
+                flex: 1 1 auto; 
+            }
+
+    .contenedorBody {
+        /* background: #f85959;  */
+        display: flex;  /* Muestra uno a lado del otro */
+        flex-flow: column nowrap; /* para que se muestre en columnas y nowrap para que se adapten los cuadros en tamaño establecido. Es decir anulamos la sentencia anterior*/
+    }
+        .bFotoPrincipal {
+             /* background: #bea672;  */
+             height: 500px;
+             background: url(../img/index/fondo01.png);
+             background-position: center; /* Imagen Centrada */
+             background-size: cover;      /* Se redimienciona la imagen proporcionalmente */
+        }
+
+        .contenedorBodyInformacion {
+            display: flex;  /* Muestra uno a lado del otro */ 
+            background: #23B5E6;
+        }
+            .bNavInformacion {
+
+                background: #23B5E6;
+                display: flex;
+                flex-flow: column;
+                flex: 1 1 auto;  
+            }   
+
+                .bNavInformacion img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+            .bAsideInformacion {
+                flex: 1 1 auto;  
+                background: #23B5E6;
+                padding: 5 10px;
+                margin: 5px;
+
+            } 
+                .bAsideInformacion h6 {
+                    color: #7da87b;
+                    text-align: center;
+                    font-size: 1.7em;
+                    line-height: 1.6;
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                }
+
+                .bAsideInformacion p {
+                    font-size: 20px;
+                }
+
+                .bAsideInformacion li {
+                    list-style-type: square;
+                    list-style-position: inside;
+                }
+
+            .contenedorBodyVideos {
+                display: flex; 
+                background: #23B5E6;
+            }
+
+                .bVideoVideoPrincipal {
+                    background: #23B5E6;
+                }
+
+                    .bVideoVideoPrincipal iframe {
+                        width: 560px;
+                        height: 315px; 
+                        margin-left: 280px;
+                }
+
+            .contenedorBodyTestimonios {
+                    display: flex; 
+                    background: #23B5E6;
+                }
+    
+                    .bTestimoniosPrincipal {
+                        background: #23B5E6;
+                    }
+    
+                        .bTestimoniosPrincipal iframe {
+                            width: 560px;
+                            height: 315px; 
+                            margin-left: 280px;
+
+                    }
+    
+                
+            
+    .contenedorFooter {
+         /* background: #f85959;  */
+         display: flex;  /* Muestra uno a lado del otro */
+         flex-flow: column nowrap; /* para que se muestre en columnas y nowrap para que se adapten los cuadros en tamaño establecido. Es decir anulamos la sentencia anterior*/
+         text-align: center;
+    }
+
+        .contenedorFooter a {
+            color: #fff;
+        }
+
+        .fnavegacion {
+            /* background: #000; */
+            display: flex;  /* Muestra uno a lado del otro */ 
+            flex-direction: row;  /*direcion en fila un cuadro seguido del otro */
+            flex-wrap: nowrap; /* distribuirlos en una sola linea */
+            align-items: center; /* los elementos hijo se centran verticalmente */
+            background: #000;
+        } 
+        
+            .fMapaDelSitio {
+                /* background: #000; */
+                flex: 1 1 auto; 
+
+            }
+
+            .fTerminosyCondiciones {
+                /* background: #000; */
+                flex: 1 1 auto; 
+            }
+            .fDerechosReservados {
+                /* background: #000; */
+                flex: 1 1 auto; 
+            }
+
+@media all and  (max-width: 900px) {
+    .hHearder {
+        flex-direction: column;
+    }
+    .fnavegacion {
+        flex-direction: column;
+    }
+}
+
+/* @media all and (max-width: 950px){
+	.nav a{ font-size: 50px; }
+} */
+
+@media all and (max-width: 700px){
+	.hNavOcultar{ display: none; }
+}
