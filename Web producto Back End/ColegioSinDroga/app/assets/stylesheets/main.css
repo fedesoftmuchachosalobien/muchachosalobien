@@ -4,13 +4,11 @@
     margin: 0px;
     padding: 0px;
 }
-body {
-    background-color: #23B5E6;
 
-}
-.contenedorPrincipal {
+html, body, header {
     background-color: #23B5E6;
 }
+
     h5 {
         color: #fff;
         font-size: 1.3em;;
